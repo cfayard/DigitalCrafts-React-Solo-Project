@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import { getAccounts, addAccount } from "../../actions/accountActions";
 import Accounts from "./Accounts";
+import Spinner from "./Spinner";
+
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getAccounts();
@@ -27,7 +29,7 @@ render() {
     const { accounts, accountsLoading } = this.props.plaid;
 let dashboardContent;
 if (accounts === null || accountsLoading) {
-      dashboardContent = <p className="center-align">Loading...</p>;
+      dashboardContent = <Spinner />;
     } else if (accounts.length > 0) {
       // User has accounts linked
       dashboardContent = <Accounts user={user} accounts={accounts} />;
