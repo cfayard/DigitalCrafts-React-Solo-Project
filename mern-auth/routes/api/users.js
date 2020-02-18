@@ -80,8 +80,7 @@ router.post("/login", (req, res) => {
         // Create JWT Payload
         const payload = {
           id: user.id,
-          name: user.name,
-          email: user.email
+          name: user.name
         };
 
         // Sign token
