@@ -7,12 +7,16 @@ const mongoose = require("mongoose");
 // Load Account and User models
 const Account = require("../../models/Account");
 const User = require("../../models/User");
+ casey-branch-1
 
 const keys = require("../../config/keys");
 const PLAID_CLIENT_ID = keys.PLAID_CLIENT_ID;
 console.log(PLAID_CLIENT_ID)
 const PLAID_SECRET = keys.PLAID_SECRET;
 const PLAID_PUBLIC_KEY = keys.PLAID_PUBLIC_KEY;
+
+
+ master
 const client = new plaid.Client(
   PLAID_CLIENT_ID,
   PLAID_SECRET,
